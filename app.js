@@ -70,3 +70,53 @@ Allicons.map((product) => {
         </div>`;
         producticons.innerHTML += producthtml;
 });
+
+
+
+const Allproducts=[
+    {
+        Image: "img/img-product-5.jpg",
+        name : "V-Beauty pack",
+        price: 25.65
+    },
+    {
+        Image: "img/img-product-3.jpg",
+        name : "Anti-Aging Cream",
+        price: 30.99
+    },
+    {
+        Image: "img/img-product-1.jpg",
+        name : "Hair style Gel",
+        price: 90.25
+    },
+    {
+        Image: "img/img-product-4.jpg",
+        name : "V-bath saltish",
+        price: 76.87
+    },
+    {
+        Image: "img/img-product-6.jpg",
+        name : "beauty Glow serum",
+        price: 64.00
+    },
+    {
+        Image: "img/img-product-2.jpg",
+        name : "Skinny lotion",
+        price: 54.12
+    },
+ 
+];
+
+const Productcards=document.querySelector("#productcards");
+
+Allproducts.map((product)=>{
+    producthtml=`<div class="shadow-lg bg-gray-100 px-3 py-5 my-14 scale-130">
+                <img src="${product.Image}">
+                <h3  class="py-3">${product.name}</h3>
+                <h4 class="py-5">$${product.price} </h4>
+                <button class="rounded-lg bg-[#EA5A31] text-white px-2 py-1 cursor-pointer" onclick="buyNow('${product.Image}', '${product.name}', '${product.price}')">Buy Now</button>
+                
+            </div>`
+            productcards.innerHTML += producthtml;
+
+})
