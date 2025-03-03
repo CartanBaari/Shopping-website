@@ -4,6 +4,8 @@ icon.addEventListener("click", ()=>{
     mobilemenu.classList.toggle("hidden");
 })
 
+      // end menu
+
 const Allproduct = [
     {
         Image: "img/slider-slide-3.jpg",
@@ -29,7 +31,7 @@ Allproduct.map((product) => {
     productimgs.innerHTML += producthtml;
 });
 
-// //end product img
+// //end product slider
 
 
 
@@ -71,6 +73,7 @@ Allicons.map((product) => {
         producticons.innerHTML += producthtml;
 });
 
+// end product icons
 
 
 const Allproducts=[
@@ -110,13 +113,15 @@ const Allproducts=[
 const Productcards=document.querySelector("#productcards");
 
 Allproducts.map((product)=>{
-    producthtml=`<div class="shadow-lg bg-gray-100 px-3 py-5 my-14 scale-130">
+    producthtml=`<div class="shadow-lg bg-gray-100 px-3 py-5 my-8 scale-130">
                 <img src="${product.Image}">
-                <h3  class="py-3">${product.name}</h3>
-                <h4 class="py-5">$${product.price} </h4>
+                <h3  class="py-2 text-2xl font-[Roboto] font-bold">${product.name}</h3>
+                <h4 class="py-5 text-2xl">$${product.price} </h4>
                 <button class="rounded-lg bg-[#EA5A31] text-white px-2 py-1 cursor-pointer" onclick="buyNow('${product.Image}', '${product.name}', '${product.price}')">Buy Now</button>
                 
             </div>`
             productcards.innerHTML += producthtml;
 
 })
+
+// end product cards
