@@ -64,10 +64,10 @@ const Allicons = [
 
 const producticons = document.querySelector("#producticons");
 
-Allicons.map((product) => {
+Allicons.map((icon) => {
     const producthtml = `<div class="shadow-lg bg-white px-12 md:px-1 py-5 md:my-20">
-            <img src="${product.Image}">
-            <h3 class="py-3 text-xl">${product.name}</h3>
+            <img src="${icon.Image}">
+            <h3 class="py-3 text-xl">${icon.name}</h3>
              <a class="text-2xl text-[#EA5A31] hover:text-[#222222] hover:underline" href="#">Click</a>
         </div>`;
         producticons.innerHTML += producthtml;
@@ -123,5 +123,5 @@ Allproducts.map((product)=>{
             productcards.innerHTML += producthtml;
 
 })
-
+ 
 // end product cards
